@@ -1,0 +1,5 @@
+Needs ruby > 2 (I used ruby 2.5)
+
+Run the download script via:
+
+ruby download_images_from_file.rb images/file_{list numbers} {optional max # of images}
