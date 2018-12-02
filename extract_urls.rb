@@ -2,7 +2,7 @@
 
 num_files = 1
 
-line_count_cutoff = 100_000
+line_count_cutoff = ARGV[0].to_i || 10_000
 new_file = File.new("images/file_#{num_files}", 'w')
 
 # if original doesnt exist download original fall11_urls and unpack it
