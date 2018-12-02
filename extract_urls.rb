@@ -6,7 +6,7 @@ line_count_cutoff = ARGV[0].nil? ? 10_000 : ARGV[0].to_i
 new_file = File.new("images/file_#{num_files}", 'w')
 
 # if original doesnt exist download original fall11_urls and unpack it
-unless File.file?('imagenet_fall11_urls.txt') || File.file?('imagenet_fall11_urls.tgz')
+if !File.file?('imagenet_fall11_urls.txt') && !File.file?('imagenet_fall11_urls.tgz')
   `wget http://image-net.org/imagenet_data/urls/imagenet_fall11_urls.tgz`
   `tar -xvzf imagenet_fall11_urls.tgz`
 end
