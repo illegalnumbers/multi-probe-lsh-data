@@ -3,7 +3,7 @@
 num_files = 1
 
 line_count_cutoff = ARGV[0].nil? ? 10_000 : ARGV[0].to_i
-num_files_cutoff = ARGV[1].nil? ? 1000 : ARGV[1].to_i
+num_files_cutoff = ARGV[1].nil? ? 100 : ARGV[1].to_i
 new_file = File.new("images/file_#{num_files}", 'w')
 
 # if original doesnt exist download original fall11_urls and unpack it
